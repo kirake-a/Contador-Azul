@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import com.mantenimiento.azul.exception.InvalidLineFormatException;
-import com.mantenimiento.azul.regex.Regex;
-
+import com.mantenimiento.azul.utils.Regex;
 
 
 public class WordChecker extends Checker {
