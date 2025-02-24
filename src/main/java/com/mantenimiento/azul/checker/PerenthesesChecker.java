@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import com.mantenimiento.azul.exception.InvalidLineFormatException;
-import com.mantenimiento.azul.regex.Regex;
+import com.mantenimiento.azul.utils.Regex;
 
 public class PerenthesesChecker extends Checker {
 
@@ -17,7 +17,7 @@ public class PerenthesesChecker extends Checker {
 
         boolean pass = codeStream.stream().anyMatch(line -> this.pattern.matcher(line).matches());
         if (pass) {
-            throw new InvalidLineFormatException("No se permite terminar la línea de códgo con paréntesis");
+            throw new InvalidLineFormatException("No se permite terminar la línea de código con paréntesis");
         } else if (this.next != null) {
             this.next.pass(codeStream);
         }
