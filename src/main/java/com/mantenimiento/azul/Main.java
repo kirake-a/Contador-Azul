@@ -1,7 +1,7 @@
 package com.mantenimiento.azul;
 
 import com.mantenimiento.azul.checker.MultiInstanceChecker;
-import com.mantenimiento.azul.checker.PerenthesesChecker;
+import com.mantenimiento.azul.checker.ParenthesesChecker;
 import com.mantenimiento.azul.checker.WordChecker;
 import com.mantenimiento.azul.checker.Checker;
 import com.mantenimiento.azul.checker.LeftCurlyBraceChecker;
@@ -27,11 +27,17 @@ public class Main {
     }
     
     private static Checker createCheckerChain() {
-        PerenthesesChecker checker1 = new PerenthesesChecker();
-        LeftCurlyBraceChecker checker3 = new LeftCurlyBraceChecker();
+        ParenthesesChecker parenthesesChecker = new ParenthesesChecker();
+        LeftCurlyBraceChecker leftCurlyBraceChecker = new LeftCurlyBraceChecker();
+        MultiInstanceChecker multiInstanceChecker = new MultiInstanceChecker();
+        WordChecker wordChecker = new WordChecker();
+
+        parenthesesChecker.setNext(leftCurlyBraceChecker);
+        leftCurlyBraceChecker.setNext(multiInstanceChecker);
+        multiInstanceChecker.setNext(wordChecker);
       
         
-        return checker3;
+        return parenthesesChecker;
     }
     
     private static List<FileStats> analyzeProject(String projectPath, CodeProcessor processor) {
