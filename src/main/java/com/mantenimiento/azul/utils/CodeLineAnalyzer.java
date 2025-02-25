@@ -2,7 +2,8 @@ package com.mantenimiento.azul.utils;
 
 import java.io.*;
 import java.nio.file.Path;
-import com.mantenimiento.azul.Models.FileStats;
+
+import com.mantenimiento.azul.model.FileStats;
 
 public class CodeLineAnalyzer {
 

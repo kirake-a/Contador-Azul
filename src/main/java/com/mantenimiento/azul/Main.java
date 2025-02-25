@@ -6,8 +6,8 @@ import com.mantenimiento.azul.checker.WordChecker;
 import com.mantenimiento.azul.checker.Checker;
 import com.mantenimiento.azul.checker.LeftCurlyBraceChecker;
 import com.mantenimiento.azul.processor.CodeProcessor;
-import com.mantenimiento.azul.Models.FileStats;
 import com.mantenimiento.azul.exception.InvalidLineFormatException;
+import com.mantenimiento.azul.model.FileStats;
 
 import java.io.IOException;
 import java.nio.file.*;
