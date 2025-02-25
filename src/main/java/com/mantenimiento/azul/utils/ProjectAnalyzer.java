@@ -6,7 +6,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mantenimiento.azul.Models.FileStats;
+import com.mantenimiento.azul.model.FileStats;
 
 public class ProjectAnalyzer {
 
