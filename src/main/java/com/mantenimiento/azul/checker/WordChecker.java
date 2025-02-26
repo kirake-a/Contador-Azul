@@ -11,7 +11,7 @@ public class WordChecker extends Checker {
 
         boolean pass = codeStream.stream().
                 anyMatch(line -> Regex.ENDS_WITH_WORD.matcher(line).matches() &&
-                Regex.BLOCK_COMMENT_START.matcher(line).matches());
+                !Regex.BLOCK_COMMENT_START.matcher(line).matches());
 
         if (pass) {
             throw new InvalidLineFormatException("No se permite terminar la línea de códgo con palabras");
