@@ -4,6 +4,7 @@ import com.mantenimiento.azul.checker.MultiInstanceChecker;
 import com.mantenimiento.azul.checker.ParenthesesChecker;
 import com.mantenimiento.azul.checker.WordChecker;
 import com.mantenimiento.azul.checker.Checker;
+import com.mantenimiento.azul.checker.EndBreakChecker;
 import com.mantenimiento.azul.checker.LeftCurlyBraceChecker;
 import com.mantenimiento.azul.processor.CodeProcessor;
 import com.mantenimiento.azul.exception.InvalidLineFormatException;
@@ -31,10 +32,12 @@ public class Main {
         LeftCurlyBraceChecker leftCurlyBraceChecker = new LeftCurlyBraceChecker();
         MultiInstanceChecker multiInstanceChecker = new MultiInstanceChecker();
         WordChecker wordChecker = new WordChecker();
+        EndBreakChecker endBreakChecker = new EndBreakChecker();
 
         parenthesesChecker.setNext(leftCurlyBraceChecker);
         leftCurlyBraceChecker.setNext(multiInstanceChecker);
         multiInstanceChecker.setNext(wordChecker);
+        wordChecker.setNext(endBreakChecker);
       
         
         return parenthesesChecker;
