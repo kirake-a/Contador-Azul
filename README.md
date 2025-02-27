@@ -1,4 +1,4 @@
-# Contador Azul  
+# 🔵 Contador Azul  
 
 **Versión 1.0**  
 
