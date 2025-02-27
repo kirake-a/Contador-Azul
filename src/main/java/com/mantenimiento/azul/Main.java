@@ -23,6 +23,7 @@ public class Main {
         CodeProcessor processor = new CodeProcessor(checkerChain);
 
         List<FileStats> results = analyzeProject(projectPath, processor);
+        
         printResults(results);
     }
     
