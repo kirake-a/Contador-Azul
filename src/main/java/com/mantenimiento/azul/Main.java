@@ -39,6 +39,7 @@ public class Main {
             System.out.print("¿Desea analizar otra ruta? (y/n): ");
             String respuesta = scanner.nextLine().trim().toLowerCase();
             if (!(respuesta.equals("y") || respuesta.equals("yes"))) {
+                System.out.println("");
                 break;
             }
         }
