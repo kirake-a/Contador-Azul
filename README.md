@@ -65,7 +65,7 @@ Para más detalles sobre los criterios utilizados, consulta los documentos **Est
 
 A continuación, se presentan documentos de referencia para una mejor comprensión del software:   
 
-- 📘 [Manual de Usuario](https://docs.google.com/document/d/1oogZ-e2WY053GrU4JliW0DFGPPSPsZsBcy_5ffgM9qc/edit?usp=drive_link)  
+- 📘 [Manual de Usuario](https://docs.google.com/document/d/1oogZ-e2WY053GrU4JliW0DFGPPSPsZsBcy_5ffgM9qc/edit?usp=drive_link)
 - 📝 [Estándar de Documentación](https://docs.google.com/document/d/1su15Wlsb_VEBhRw2Iu9I7EtNqbBYPkfPqGkgGl9LvvE/edit?usp=drive_link)  
 - 💻 [Estándar de Codificación](https://docs.google.com/document/d/19uOpc1kjzP53rjO6apAeHAVlR4MmoQyKsyDTl_dHiSE/edit?usp=drive_link)  
 - 🔢 [Estándar de Conteo](https://docs.google.com/document/d/11PiwfwI5jAJ-mE7bw50hUrQQ6ZCvLvrPH3EOa5TMtkU/edit?usp=drive_link)  
@@ -73,6 +73,17 @@ A continuación, se presentan documentos de referencia para una mejor comprensi�
 - 📏 [Estimación de Tamaño](https://docs.google.com/document/d/1g4BUsrweWxv-6HuhO8cfAFGnIbE28OUy2KC8V0qG9xE/edit?usp=drive_link)  
 - 🧪 [Casos de Prueba](https://docs.google.com/document/d/1kSWAUzAkavfHFmvxus_ew1cxgmv9bXrP/edit?usp=drive_link&ouid=118319778907901421542&rtpof=true&sd=true)  
 - 🔍 [Plan de Revisión](https://docs.google.com/document/d/1RWhkaq88FgHuK9jPXrRJJzf-Ji7sRNoY/edit?usp=drive_link&ouid=118319778907901421542&rtpof=true&sd=true)  
+
+## 📖 Estándares Utilizados  
+
+El desarrollo de **Contador Azul** se basa en los siguientes estándares de calidad y documentación de software:  
+
+- 📑 [IEEE Std 1063-2001](https://drive.google.com/file/d/1ZIYISvjl5rOOlpSgvxCv_4gsB6wyQY3_/view?usp=drive_link)
+- 📜 [IEEE Std 830-1998](https://drive.google.com/file/d/1mxtL5cdzKf8cUiJZ-274TfEhTJASoA3u/view?usp=drive_link)
+- 🔍 [ISO/IEEE Std.1028 – 1997](https://drive.google.com/file/d/1g8dBzLd4nQz2ysXNanFmfyVzafO-DfMl/view?usp=drive_link)
+- 🛠️ [ISO/IEEE Std.1012 – 2016](https://drive.google.com/file/d/1E_ZUKkqkTrvzV2X0ua52uxz2ChDWqi28/view?usp=drive_link)
+- 🏗️ [ISO/IEEE Std.20246 – 2017]
+- 📊 [ISO/IEC 15939](https://drive.google.com/file/d/1oQ9x49OFU7PGYX5UYhwURqqbM2HkNceg/view?usp=drive_link)
 
 ---  
 📌 **Desarrollado por:**  
