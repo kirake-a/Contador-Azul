@@ -72,7 +72,6 @@ A continuación, se presentan documentos de referencia para una mejor comprensi�
 - 📜 [Requisitos de Software](https://docs.google.com/document/d/1bI06r7wwYfzkezmOEdO2JPwaAShDrfzbgfU4EOcBKac/edit?usp=drive_link)  
 - 📏 [Estimación de Tamaño](https://docs.google.com/document/d/1g4BUsrweWxv-6HuhO8cfAFGnIbE28OUy2KC8V0qG9xE/edit?usp=drive_link)  
 - 🧪 [Casos de Prueba](https://docs.google.com/document/d/1kSWAUzAkavfHFmvxus_ew1cxgmv9bXrP/edit?usp=drive_link&ouid=118319778907901421542&rtpof=true&sd=true)  
-- 🔍 [Plan de Revisión](https://docs.google.com/document/d/1RWhkaq88FgHuK9jPXrRJJzf-Ji7sRNoY/edit?usp=drive_link&ouid=118319778907901421542&rtpof=true&sd=true)
 
 ### 📊 Diagramas
 
