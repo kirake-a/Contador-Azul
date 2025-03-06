@@ -1,6 +1,6 @@
 # 🔵 Contador Azul  
 
-**Versión 1.0**  
+**Versión 1.1**  
 
 Contador Azul es un software diseñado para analizar código fuente en Java y determinar el número de líneas físicas y lógicas presentes en un proyecto. Es una herramienta útil para desarrolladores y equipos de software que buscan obtener métricas de su código de manera eficiente.  
 
@@ -19,10 +19,8 @@ Para instalar **Contador Azul**, sigue estos pasos:
 3. Abrir la carpeta **Ejecutables**.  
 4. Descargar el instalador según el sistema operativo:  
    - **Windows**: `ContadorAzul.exe`  
-   - **macOS**: `ContadorAzul.jar`  
-5. Ejecutar el archivo descargado y seguir las instrucciones.  
-
-> **Nota:** Es importante que la ruta donde se instale el software no contenga espacios, por ejemplo: `C:\...\MiCarpeta\Contador-Azul`.  
+   - **MacOS**: `ContadorAzul.jar`  
+5. Ejecutar el archivo descargado y seguir las instrucciones.    
 
 ## 🚀 Ejecución  
 
@@ -33,15 +31,16 @@ Para iniciar el programa, sigue los pasos según tu sistema operativo:
 2. Ingresar a la carpeta **Ejecutables**.  
 3. Localizar y ejecutar `ContadorAzul.exe`.  
 
-### **macOS**  
+### **MacOS**  
 1. Abrir la carpeta **Ejecutables**.  
-2. Ingresar a la carpeta **macOS**.  
+2. Ingresar a la carpeta **MacOS**.  
 3. Abrir la **Terminal** en esta ubicación (clic derecho → "Abrir en Terminal").  
 4. Ejecutar el programa con el siguiente comando:  
 
    ```bash
    java -jar ContadorAzul.jar
-   ```  
+   ```
+> **Nota:** Es importante que la ruta que se le proporcione al programa no contenga espacios, por ejemplo: `C:\...\MiCarpeta\ContadorAzul` o `/Users/Nombre/MiCarpeta/ContadorAzul`.
 
 ## 🗑️ Desinstalación  
 
