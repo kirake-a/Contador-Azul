@@ -14,17 +14,42 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         String projectPath = args.length > 0 ? args[0] : ".";
         
+        while (true) {
+            System.out.println("");
+            System.out.print("Introduzca la ruta del proyecto:");
+            String inputPath = scanner.nextLine().trim();
+            System.out.println("");
+            
+            if (!inputPath.isEmpty()) {
+                projectPath = inputPath;
+            }
+            
+            Checker checkerChain = createCheckerChain();
+            CodeProcessor processor = new CodeProcessor(checkerChain);
 
-        Checker checkerChain = createCheckerChain();
-        CodeProcessor processor = new CodeProcessor(checkerChain);
-
-        List<FileStats> results = analyzeProject(projectPath, processor);
-        printResults(results);
+            List<FileStats> results = analyzeProject(projectPath, processor);
+            if (!results.isEmpty()) {
+                printResults(results);
+            }
+            
+            System.out.println("");
+            System.out.print("¿Desea analizar otra ruta? (y/n): ");
+            String respuesta = scanner.nextLine().trim().toLowerCase();
+            if (!(respuesta.equals("y") || respuesta.equals("yes"))) {
+                System.out.println("");
+                break;
+            }
+        }
+        
+        scanner.close();
     }
     
     private static Checker createCheckerChain() {
@@ -73,11 +98,19 @@ public class Main {
     }
 
     private static void printResults(List<FileStats> results) {
-        System.out.printf("%-50s %-15s %-15s%n", "Archivo", "Líneas Físicas", "Líneas Lógicas");
-        System.out.println("=".repeat(80));
+        int totalPhysicalLines = 0;
+        int totalLogicalLines = 0;
+
+        System.out.printf("%-40s | %-15s | %-15s%n", "Archivo", "Líneas Físicas", "Líneas Lógicas");
+        System.out.println("=".repeat(76));
 
         for (FileStats stats : results) {
-            System.out.printf("%-50s %-15d %-15d%n", stats.fileName(), stats.physicalLines(), stats.logicalLines());
+            System.out.printf("%-40s | %-15d | %-15d%n", stats.fileName(), stats.physicalLines(), stats.logicalLines());
+            totalPhysicalLines += stats.physicalLines();
+            totalLogicalLines += stats.logicalLines();
         }
+        
+        System.out.println("=".repeat(76));
+        System.out.printf("%-40s | %-15d | %-15d%n", "Total:", totalPhysicalLines, totalLogicalLines);
     }
 }
