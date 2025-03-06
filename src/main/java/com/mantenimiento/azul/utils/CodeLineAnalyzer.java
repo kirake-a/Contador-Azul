@@ -32,7 +32,9 @@ public class CodeLineAnalyzer {
                 if (Regex.SINGLE_LINE_COMMENT.matcher(line).matches()) continue;
 
                 physicalLines++;
-
+                if(line.contains("else") || line.contains("catch") || line.contains("finally")){
+                    continue;
+                }
                 if (Regex.LOGICAL_LINE.matcher(line).matches()) {
                     logicalLines++;
                 }

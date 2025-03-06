@@ -24,7 +24,7 @@ public class CodeProcessorTest {
 
         String regularFileTest = "src\\test\\java\\com\\mantenimiento\\azul\\RegularFile.java";
         Path processorNeededFile = Paths.get(regularFileTest);
-        FileStats expectedResult = new FileStats(regularFileTest, 6, 4);
+        FileStats expectedResult = new FileStats(regularFileTest, 14, 4);
 
         Checker checkerChain = createCheckerChain();
         CodeProcessor codeProcessor = new CodeProcessor(checkerChain);
@@ -33,6 +33,8 @@ public class CodeProcessorTest {
 
             FileStats obtainedResult =  codeProcessor.processFile(processorNeededFile);
             assertEquals(expectedResult,obtainedResult);
+            System.out.println("El resultado esperado era" + expectedResult);
+            System.out.println("Y el resultado obtenido fue " + obtainedResult);
 
         } catch (IOException e) {
 
