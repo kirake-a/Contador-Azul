@@ -62,7 +62,6 @@ public class Main {
         leftCurlyBraceChecker.setNext(multiInstanceChecker);
         multiInstanceChecker.setNext(endBreakChecker);
       
-        
         return parenthesesChecker;
     }
     
