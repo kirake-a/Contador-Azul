@@ -27,8 +27,8 @@ Para instalar **Contador Azul**, sigue estos pasos:
 Para iniciar el programa, sigue los pasos según tu sistema operativo:  
 
 ### **Windows**  
-1. Abrir la ubicación del proyecto en el explorador de archivos.  
-2. Ingresar a la carpeta **Ejecutables**.  
+1. Abrir la carpeta **Ejecutables**.  
+2. Ingresar a la carpeta **Windows**.
 3. Localizar y ejecutar `ContadorAzul.exe`.  
 
 ### **MacOS**  
