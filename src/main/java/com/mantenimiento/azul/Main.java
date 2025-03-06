@@ -18,6 +18,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         String projectPath = args.length > 0 ? args[0] : ".";
+        
 
         Checker checkerChain = createCheckerChain();
         CodeProcessor processor = new CodeProcessor(checkerChain);
