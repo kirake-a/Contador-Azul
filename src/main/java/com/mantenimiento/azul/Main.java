@@ -20,13 +20,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String projectPath = args.length > 0 ? args[0] : ".";
         
         while (true) {
             System.out.println("");
-            System.out.print("Introduzca la ruta del proyecto: ");
-            String projectPath = scanner.nextLine();
+            System.out.print("Introduzca la ruta del proyecto:");
+            String inputPath = scanner.nextLine().trim();
             System.out.println("");
-
+            
+            if (!inputPath.isEmpty()) {
+                projectPath = inputPath;
+            }
+            
             Checker checkerChain = createCheckerChain();
             CodeProcessor processor = new CodeProcessor(checkerChain);
 
