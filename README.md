@@ -64,29 +64,30 @@ Para más detalles sobre los criterios utilizados, consulta los documentos **Est
 
 A continuación, se presentan documentos de referencia para una mejor comprensión del software:   
 
-- 📘 [Manual de Usuario](https://docs.google.com/document/d/1oogZ-e2WY053GrU4JliW0DFGPPSPsZsBcy_5ffgM9qc/edit?usp=drive_link)
-- 📝 [Estándar de Documentación](https://docs.google.com/document/d/1su15Wlsb_VEBhRw2Iu9I7EtNqbBYPkfPqGkgGl9LvvE/edit?usp=drive_link)  
-- 💻 [Estándar de Codificación](https://docs.google.com/document/d/19uOpc1kjzP53rjO6apAeHAVlR4MmoQyKsyDTl_dHiSE/edit?usp=drive_link)  
-- 🔢 [Estándar de Conteo](https://docs.google.com/document/d/11PiwfwI5jAJ-mE7bw50hUrQQ6ZCvLvrPH3EOa5TMtkU/edit?usp=drive_link)  
-- 📜 [Requisitos de Software](https://docs.google.com/document/d/1bI06r7wwYfzkezmOEdO2JPwaAShDrfzbgfU4EOcBKac/edit?usp=drive_link)  
-- 📏 [Estimación de Tamaño](https://docs.google.com/document/d/1g4BUsrweWxv-6HuhO8cfAFGnIbE28OUy2KC8V0qG9xE/edit?usp=drive_link)  
-- 🧪 [Casos de Prueba](https://docs.google.com/document/d/1kSWAUzAkavfHFmvxus_ew1cxgmv9bXrP/edit?usp=drive_link&ouid=118319778907901421542&rtpof=true&sd=true)  
+- 📘 [Manual de Usuario](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Manual%20de%20Usuario%20(V1.1).pdf)
+- 📝 [Estándar de Documentación](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Est%C3%A1ndar%20de%20Documentaci%C3%B3n%20(V1.0).pdf)  
+- 💻 [Estándar de Codificación](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Est%C3%A1ndar%20de%20Codificaci%C3%B3n%20(V1.0).pdf)  
+- 🔢 [Estándar de Conteo](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Est%C3%A1ndar%20de%20Conteo%20(V1.1).pdf)  
+- 📜 [Requisitos de Software](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Requisitos%20de%20Software%20(V1.0).pdf)  
+- 📏 [Estimación de Tamaño](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Estimaci%C3%B3n%20de%20Tama%C3%B1o%20(V1.1).pdf)  
+- 🧪 [Casos de Prueba](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Casos%20de%20Prueba%20(V1.2).pdf)  
 
 ### 📊 Diagramas
 
-- 📌 [Diagrama de Clases](https://drive.google.com/file/d/1iUIdOFh8PK0kPbRYfi-ifxI700BUx5YP/view?usp=drive_link)
-- 🔄 [Diagrama de Secuencia](https://drive.google.com/file/d/1Fyush5ETxeLQoOLyNVCIXy1n8w29exuD/view?usp=drive_link)
+- 📌 [Diagrama de Clases](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/diagramas/Diagrama%20de%20Clases.pdf)
+- 🔄 [Diagrama de Secuencia](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/diagramas/Diagrama%20de%20Secuencia.pdf)
 
 ## 📖 Estándares Utilizados  
 
 El desarrollo de **Contador Azul** se basa en los siguientes estándares de calidad y documentación de software:  
 
-- 📑 [IEEE Std 1063-2001](https://drive.google.com/file/d/1ZIYISvjl5rOOlpSgvxCv_4gsB6wyQY3_/view?usp=drive_link)
-- 📜 [IEEE Std 830-1998](https://drive.google.com/file/d/1mxtL5cdzKf8cUiJZ-274TfEhTJASoA3u/view?usp=drive_link)
-- 🔍 [ISO/IEEE Std.1028 – 1997](https://drive.google.com/file/d/1g8dBzLd4nQz2ysXNanFmfyVzafO-DfMl/view?usp=drive_link)
-- 🛠️ [ISO/IEEE Std.1012 – 2016](https://drive.google.com/file/d/1E_ZUKkqkTrvzV2X0ua52uxz2ChDWqi28/view?usp=drive_link)
-- 🏗️ [ISO/IEEE Std.20246 – 2017](https://drive.google.com/file/d/1neQNQUSvc7EdePtgQ0ajXKw4sjQL-s2y/view?usp=drive_link)
-- 📊 [ISO/IEC 15939](https://drive.google.com/file/d/1oQ9x49OFU7PGYX5UYhwURqqbM2HkNceg/view?usp=drive_link)
+- 📑 [IEEE Std 1063-2001](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/ieee-standard-for-software-user-documentation.pdf)
+- 📜 [IEEE Std 830-1998](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/IEEE830.pdf)
+- 📃 [IEEE Std 828-2012](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/IEEE%20828-2012.pdf)
+- 🔍 [ISO/IEEE Std.1028 – 1997](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/IEEE%20Std%201028-1997.pdf)
+- 🛠️ [ISO/IEEE Std.1012 – 2016](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/Standart%20IEEE%201012-2016.pdf)
+- 🏗️ [ISO/IEEE Std.20246 – 2017](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/ISO-IEC-20246-2017.pdf)
+- 📊 [ISO/IEC 15939](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/isoiecieee-international-standard--systems-and-software-engineer.pdf)
 
 ---  
 📌 **Desarrollado por:**  
