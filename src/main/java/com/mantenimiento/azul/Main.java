@@ -99,15 +99,18 @@ public class Main {
     private static void printResults(List<FileStats> results) {
         int totalPhysicalLines = 0;
 
-        System.out.printf("%-40s | %-15s | %-15s%n", "Archivo", "Líneas Físicas");
-        System.out.println("=".repeat(76));
+        System.out.printf("%-40s | %-15s", "Archivo", "Lineas Fisicas");
+        System.out.println("");
+        System.out.println("=".repeat(50));
 
         for (FileStats stats : results) {
-            System.out.printf("%-40s | %-15d | %-15d%n", stats.fileName(), stats.physicalLines());
+            System.out.printf("%-40s | %-15d", stats.fileName(), stats.physicalLines());
+            System.out.println("");
             totalPhysicalLines += stats.physicalLines();
         }
-        
-        System.out.println("=".repeat(76));
-        System.out.printf("%-40s | %-15d | %-15d%n", "Total:", totalPhysicalLines);
+
+        System.out.println("");
+        System.out.println("=".repeat(50));
+        System.out.printf("%-40s | %-15d", "Total:", totalPhysicalLines);
     }
 }
