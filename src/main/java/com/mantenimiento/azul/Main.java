@@ -99,7 +99,7 @@ public class Main {
     private static void printResults(List<FileStats> results) {
         int totalPhysicalLines = 0;
 
-        System.out.printf("%-40s | %-15s", "Archivo", "Lineas Fisicas");
+        System.out.printf("%-40s | %-15s | %-15s", "Archivo", "Lineas Fisicas", "LOC");
         System.out.println("");
         System.out.println("=".repeat(50));
 
@@ -107,6 +107,10 @@ public class Main {
             System.out.printf("%-40s | %-15d", stats.fileName(), stats.physicalLines());
             System.out.println("");
             totalPhysicalLines += stats.physicalLines();
+            for(int i = 0; i < stats.classes().size(); i++) {
+                System.out.printf("%-40s | %-15d", stats.classes().get(i).getName(), stats.classes().get(i).getPhysicalLOC());
+                System.out.println("");
+            }   
         }
 
         System.out.println("");
