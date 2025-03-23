@@ -37,7 +37,7 @@ public class Main {
 
             List<FileStats> results = analyzeProject(projectPath, processor);
             if (!results.isEmpty()) {
-                printResults(results);
+                printResults(results, projectPath);
             }
             
             System.out.println("");
@@ -96,25 +96,28 @@ public class Main {
         }
     }
 
-    private static void printResults(List<FileStats> results) {
+    private static void printResults(List<FileStats> results, String projectPath) {
         int totalPhysicalLines = 0;
+        String[] projectP = projectPath.split("\\\\");
+        String projectName = projectP[projectP.length - 1];
 
-        System.out.printf("%-40s | %-15s | %-15s", "Archivo", "Lineas Fisicas", "LOC");
         System.out.println("");
-        System.out.println("=".repeat(50));
+        System.out.println("Programa: " + projectName);
+        System.out.printf("%-20s | %-10s | %-15s | %-26s |", "Clase", "Metodos","LOC f Clase", "LOC f totales del programa");
+        System.out.println("");
+        System.out.println("=".repeat(82));
 
         for (FileStats stats : results) {
-            System.out.printf("%-40s | %-15d", stats.fileName(), stats.physicalLines());
-            System.out.println("");
+
             totalPhysicalLines += stats.physicalLines();
             for(int i = 0; i < stats.classes().size(); i++) {
-                System.out.printf("%-40s | %-15d", stats.classes().get(i).getName(), stats.classes().get(i).getPhysicalLOC());
+                System.out.printf("%-20s | %-10d | %-15d | %-26s |", stats.classes().get(i).getName(), 0,stats.classes().get(i).getPhysicalLOC(),"");
                 System.out.println("");
-            }   
+            }          
         }
 
         System.out.println("");
-        System.out.println("=".repeat(50));
-        System.out.printf("%-40s | %-15d", "Total:", totalPhysicalLines);
+        System.out.println("=".repeat(82));
+        System.out.printf("%-20s | %-10s | %-15s | %-26d |","", "", "", totalPhysicalLines);
     }
 }
