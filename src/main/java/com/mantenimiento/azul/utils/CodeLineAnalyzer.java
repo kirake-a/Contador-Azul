@@ -36,6 +36,10 @@ public class CodeLineAnalyzer {
                     insideBlockComment = true;
                     continue;
                 }
+                if (Regex.BLOCK_COMMENT_CONTINUE.matcher(line).matches()) {
+                    continue;
+                }
+
                 if (Regex.SINGLE_LINE_COMMENT.matcher(line).matches()) continue;
 
                 // ---------------- Identificación de clases ---------------- //

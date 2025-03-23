@@ -10,9 +10,11 @@ public class Regex {
     public static final Pattern ENDS_WITH_WORD = Pattern.compile(".*\\b\\w+\\b$");
     
     public static final Pattern SINGLE_LINE_COMMENT = Pattern.compile("//.*");
+
     public static final Pattern BLOCK_COMMENT_START = Pattern.compile("/\\*.*");
+    public static final Pattern BLOCK_COMMENT_CONTINUE = Pattern.compile("^\\s*\\*.*$"); // aun no funciona bien
     public static final Pattern BLOCK_COMMENT_END = Pattern.compile(".*\\*/");
-    public static final Pattern LOGICAL_LINE = Pattern.compile(".*[{]$");
+
     public static final Pattern ENDS_WITH_BREAK =  Pattern.compile(".*;\\s*\\}.*");
     
     public static final Pattern CLASS_IDENTIFIER =  Pattern.compile(".*\\bclass\\b\\s\\w+.*");
