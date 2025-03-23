@@ -98,26 +98,30 @@ public class Main {
 
     private static void printResults(List<FileStats> results, String projectPath) {
         int totalPhysicalLines = 0;
+        int totalLogicalLines = 0;
+
         String[] projectP = projectPath.split("\\\\");
         String projectName = projectP[projectP.length - 1];
 
         System.out.println("");
         System.out.println("Programa: " + projectName);
-        System.out.printf("%-20s | %-10s | %-15s | %-26s |", "Clase", "Metodos","LOC f Clase", "LOC f totales del programa");
+        System.out.printf("%-30s | %-10s | %-15s | %-26s |", "Clase", "Metodos","LOC f Clase", "LOC f totales del programa");
         System.out.println("");
-        System.out.println("=".repeat(82));
+        System.out.println("=".repeat(92));
 
         for (FileStats stats : results) {
 
             totalPhysicalLines += stats.physicalLines();
+            totalLogicalLines += stats.logicalLines();
+
             for(int i = 0; i < stats.classes().size(); i++) {
-                System.out.printf("%-20s | %-10d | %-15d | %-26s |", stats.classes().get(i).getName(), 0,stats.classes().get(i).getPhysicalLOC(),"");
+                System.out.printf("%-30s | %-10d | %-15d | %-26s |", stats.classes().get(i).getName(), 0,stats.classes().get(i).getPhysicalLOC(),"");
                 System.out.println("");
             }          
         }
 
         System.out.println("");
-        System.out.println("=".repeat(82));
-        System.out.printf("%-20s | %-10s | %-15s | %-26d |","", "", "", totalPhysicalLines);
+        System.out.println("=".repeat(92));
+        System.out.printf("%-30s | %-10s | %-15s | %-26d |","", "", "", totalPhysicalLines);
     }
 }

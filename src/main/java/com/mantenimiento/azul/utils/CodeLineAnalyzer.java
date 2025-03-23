@@ -3,6 +3,7 @@ package com.mantenimiento.azul.utils;
 import java.io.*;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.mantenimiento.azul.model.*;
 
@@ -10,11 +11,10 @@ public class CodeLineAnalyzer {
 
     public static FileStats analyzeFile(Path filePath) {
         int physicalLines = 0;
-        int classLineCounter = 0;
+        int logicalLines = 0;
         boolean insideBlockComment = false;
-        boolean firstClass = true;
+        String currentClassName;
         ArrayList<ClassCounter> classCounter = new ArrayList<ClassCounter>();
-        int classIndex = 0;
         ClassCounter currentClass = null;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath.toFile()))) {
@@ -46,15 +46,22 @@ public class CodeLineAnalyzer {
 
                 if (Regex.CLASS_IDENTIFIER.matcher(line).matches()) {
                     String[] classLine = line.split(" ");
-                    currentClass = new ClassCounter(classLine[2]);
+                    int indexClassWord = Arrays.asList(classLine).indexOf("class");
+                    currentClassName = classLine[indexClassWord + 1];
+                    currentClass = new ClassCounter(currentClassName);
                     classCounter.add(currentClass);
                 }
 
                 if (currentClass != null) {
                     currentClass.addPhysicalLOC();
                 }
-
-                // ---------------- lineas en blanco ---------------- //
+                
+                if(line.contains("else") || line.contains("catch") || line.contains("finally")){
+                    continue;
+                }
+                if (Regex.LOGICAL_LINE.matcher(line).matches()) {
+                    logicalLines++;
+                }
                 physicalLines++; 
             }
         } catch (IOException e) {
@@ -62,6 +69,6 @@ public class CodeLineAnalyzer {
             return null;
         }
 
-        return new FileStats(filePath.toString(), physicalLines, classCounter);
+        return new FileStats(filePath.toString(), physicalLines, logicalLines, classCounter);
     }
 }
