@@ -98,18 +98,16 @@ public class Main {
 
     private static void printResults(List<FileStats> results) {
         int totalPhysicalLines = 0;
-        int totalLogicalLines = 0;
 
-        System.out.printf("%-40s | %-15s | %-15s%n", "Archivo", "Líneas Físicas", "Líneas Lógicas");
+        System.out.printf("%-40s | %-15s | %-15s%n", "Archivo", "Líneas Físicas");
         System.out.println("=".repeat(76));
 
         for (FileStats stats : results) {
-            System.out.printf("%-40s | %-15d | %-15d%n", stats.fileName(), stats.physicalLines(), stats.logicalLines());
+            System.out.printf("%-40s | %-15d | %-15d%n", stats.fileName(), stats.physicalLines());
             totalPhysicalLines += stats.physicalLines();
-            totalLogicalLines += stats.logicalLines();
         }
         
         System.out.println("=".repeat(76));
-        System.out.printf("%-40s | %-15d | %-15d%n", "Total:", totalPhysicalLines, totalLogicalLines);
+        System.out.printf("%-40s | %-15d | %-15d%n", "Total:", totalPhysicalLines);
     }
 }
