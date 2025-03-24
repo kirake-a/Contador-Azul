@@ -12,10 +12,6 @@ public class ClassCounter {
         return physicalLOC;
     }
 
-    public void setPhysicalLOC(int physicalLOC) {
-        this.physicalLOC = physicalLOC;
-    }
-
     public void addPhysicalLOC() {
         this.physicalLOC++;
     }

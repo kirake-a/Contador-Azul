@@ -25,7 +25,7 @@ public class CodeLineAnalyzer {
                 // ---------------- lineas en blanco ---------------- //
                 if (line.isEmpty()) continue;
                 
-                // ---------------- lineas con comentarios ---------------- //
+                // ---------------- lineas o bloques de comentarios ---------------- //
                 if (insideBlockComment) {
                     if (Regex.BLOCK_COMMENT_END.matcher(line).matches()) {
                         insideBlockComment = false;
@@ -59,9 +59,14 @@ public class CodeLineAnalyzer {
                 if(line.contains("else") || line.contains("catch") || line.contains("finally")){
                     continue;
                 }
+
+                // ---------------- Identificación de lineas logicas ---------------- //
+
                 if (Regex.LOGICAL_LINE.matcher(line).matches()) {
                     logicalLines++;
                 }
+
+                // ---------------- Contador de lineas fisicas ---------------- //
                 physicalLines++; 
             }
         } catch (IOException e) {
