@@ -98,7 +98,7 @@ public class Main {
 
     private static void printResults(List<FileStats> results, String projectPath) {
         int totalPhysicalLines = 0;
-        int totalLogicalLines = 0; //Se dejo de utilizar por cuestiones de cambios de requerimientos
+        int totalLogicalLines = 0; //It was discontinued due to changing requirements
 
         String[] projectP = projectPath.split("\\\\");
         String projectName = projectP[projectP.length - 1];

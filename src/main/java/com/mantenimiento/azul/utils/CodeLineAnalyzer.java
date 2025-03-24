@@ -22,10 +22,10 @@ public class CodeLineAnalyzer {
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
 
-                // ---------------- lineas en blanco ---------------- //
+                // ---------------- blank lines ---------------- //
                 if (line.isEmpty()) continue;
                 
-                // ---------------- lineas o bloques de comentarios ---------------- //
+                // ---------------- lines or blocks of comments ---------------- //
                 if (insideBlockComment) {
                     if (Regex.BLOCK_COMMENT_END.matcher(line).matches()) {
                         insideBlockComment = false;
@@ -42,7 +42,7 @@ public class CodeLineAnalyzer {
 
                 if (Regex.SINGLE_LINE_COMMENT.matcher(line).matches()) continue;
 
-                // ---------------- Identificación de clases ---------------- //
+                // ---------------- Class identification ---------------- //
 
                 if (Regex.CLASS_IDENTIFIER.matcher(line).matches()) {
                     String[] classLine = line.split(" ");
@@ -60,13 +60,13 @@ public class CodeLineAnalyzer {
                     continue;
                 }
 
-                // ---------------- Identificación de lineas logicas ---------------- //
+                // ---------------- Identification of logical lines ---------------- //
 
                 if (Regex.LOGICAL_LINE.matcher(line).matches()) {
                     logicalLines++;
                 }
 
-                // ---------------- Contador de lineas fisicas ---------------- //
+                // ---------------- Physical line counter ---------------- //
                 physicalLines++; 
             }
         } catch (IOException e) {
