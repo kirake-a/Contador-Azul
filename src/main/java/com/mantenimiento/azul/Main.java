@@ -115,7 +115,12 @@ public class Main {
             totalLogicalLines += stats.logicalLines();
 
             for(int i = 0; i < stats.classes().size(); i++) {
-                System.out.printf("%-30s | %-10d | %-15d | %-26s |", stats.classes().get(i).getName(), 0,stats.classes().get(i).getPhysicalLOC(),"");
+                System.out.printf("%-30s | %-10d | %-15d | %-26s |", 
+                stats.classes().get(i).getName(), 
+                stats.classes().get(i).getMethodCount(),  // Ahora imprime el número de métodos
+                stats.classes().get(i).getPhysicalLOC(), 
+    "");
+
                 System.out.println("");
             }          
         }

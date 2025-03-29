@@ -55,6 +55,10 @@ public class CodeLineAnalyzer {
                 if (currentClass != null) {
                     currentClass.addPhysicalLOC();
                 }
+
+                if (currentClass != null && Regex.METHOD_IDENTIFIER.matcher(line).matches()) {
+                    currentClass.incrementMethodCount();
+                }
                 
                 if(line.contains("else") || line.contains("catch") || line.contains("finally")){
                     continue;
