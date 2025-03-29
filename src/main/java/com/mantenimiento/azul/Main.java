@@ -37,7 +37,7 @@ public class Main {
 
             List<FileStats> results = analyzeProject(projectPath, processor);
             if (!results.isEmpty()) {
-                printResults(results);
+                printResults(results, projectPath);
             }
             
             System.out.println("");
@@ -96,20 +96,32 @@ public class Main {
         }
     }
 
-    private static void printResults(List<FileStats> results) {
+    private static void printResults(List<FileStats> results, String projectPath) {
         int totalPhysicalLines = 0;
-        int totalLogicalLines = 0;
+        int totalLogicalLines = 0; //It was discontinued due to changing requirements
 
-        System.out.printf("%-40s | %-15s | %-15s%n", "Archivo", "Líneas Físicas", "Líneas Lógicas");
-        System.out.println("=".repeat(76));
+        String[] projectP = projectPath.split("\\\\");
+        String projectName = projectP[projectP.length - 1];
+
+        System.out.println("");
+        System.out.println("Programa: " + projectName);
+        System.out.printf("%-30s | %-10s | %-15s | %-26s |", "Clase", "Metodos","LOC f Clase", "LOC f totales del programa");
+        System.out.println("");
+        System.out.println("=".repeat(92));
 
         for (FileStats stats : results) {
-            System.out.printf("%-40s | %-15d | %-15d%n", stats.fileName(), stats.physicalLines(), stats.logicalLines());
+
             totalPhysicalLines += stats.physicalLines();
             totalLogicalLines += stats.logicalLines();
+
+            for(int i = 0; i < stats.classes().size(); i++) {
+                System.out.printf("%-30s | %-10d | %-15d | %-26s |", stats.classes().get(i).getName(), 0,stats.classes().get(i).getPhysicalLOC(),"");
+                System.out.println("");
+            }          
         }
-        
-        System.out.println("=".repeat(76));
-        System.out.printf("%-40s | %-15d | %-15d%n", "Total:", totalPhysicalLines, totalLogicalLines);
+
+        System.out.println("");
+        System.out.println("=".repeat(92));
+        System.out.printf("%-30s | %-10s | %-15s | %-26d |","", "", "", totalPhysicalLines);
     }
 }
