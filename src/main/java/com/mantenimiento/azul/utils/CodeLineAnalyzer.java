@@ -56,6 +56,8 @@ public class CodeLineAnalyzer {
                     currentClass.addPhysicalLOC();
                 }
 
+                // ------------- Methods counter --------- //
+
                 if (currentClass != null && Regex.METHOD_IDENTIFIER.matcher(line).matches()) {
                     currentClass.incrementMethodCount();
                 }
