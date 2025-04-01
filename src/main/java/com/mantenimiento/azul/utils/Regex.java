@@ -21,4 +21,5 @@ public class Regex {
     
     public static final Pattern CLASS_IDENTIFIER =  Pattern.compile(".*\\bclass\\b\\s\\w+.*");
 
+    public static final Pattern RECORD_IDENTIFIER =  Pattern.compile(".*\\brecord\\b\\s\\w+.*");
 }

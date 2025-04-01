@@ -11,7 +11,8 @@ public class CodeLineAnalyzer {
 
     public static FileStats analyzeFile(Path filePath) {
         int physicalLines = 0;
-        int logicalLines = 0;
+        //int logicalLines = 0;
+        int lines = 0;
         boolean insideBlockComment = false;
         String currentClassName;
         ArrayList<ClassCounter> classCounter = new ArrayList<ClassCounter>();
@@ -21,7 +22,9 @@ public class CodeLineAnalyzer {
             String line;
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
-
+                // ---------------- lines ---------------- //
+                lines++;
+                
                 // ---------------- blank lines ---------------- //
                 if (line.isEmpty()) continue;
                 
@@ -43,11 +46,19 @@ public class CodeLineAnalyzer {
                 if (Regex.SINGLE_LINE_COMMENT.matcher(line).matches()) continue;
 
                 // ---------------- Class identification ---------------- //
-
                 if (Regex.CLASS_IDENTIFIER.matcher(line).matches()) {
                     String[] classLine = line.split(" ");
                     int indexClassWord = Arrays.asList(classLine).indexOf("class");
                     currentClassName = classLine[indexClassWord + 1];
+                    currentClass = new ClassCounter(currentClassName);
+                    classCounter.add(currentClass);
+                }
+
+                // ---------------- record identification ---------------- //
+                if (Regex.RECORD_IDENTIFIER.matcher(line).matches()) {
+                    String[] recordLine = line.split(" ");
+                    int indexClassWord = Arrays.asList(recordLine).indexOf("record");
+                    currentClassName = recordLine[indexClassWord + 1];
                     currentClass = new ClassCounter(currentClassName);
                     classCounter.add(currentClass);
                 }
@@ -61,19 +72,22 @@ public class CodeLineAnalyzer {
                 }
 
                 // ---------------- Identification of logical lines ---------------- //
-
+                /*
                 if (Regex.LOGICAL_LINE.matcher(line).matches()) {
                     logicalLines++;
                 }
-
+                */
                 // ---------------- Physical line counter ---------------- //
                 physicalLines++; 
+            }
+            if (currentClass!=null) {
+                currentClass.setLines(lines);
             }
         } catch (IOException e) {
             System.err.println("Error al leer el archivo: " + filePath);
             return null;
         }
 
-        return new FileStats(filePath.toString(), physicalLines, logicalLines, classCounter);
+        return new FileStats(filePath.toString(), physicalLines, lines, classCounter);
     }
 }
