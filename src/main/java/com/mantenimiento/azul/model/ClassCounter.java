@@ -3,6 +3,7 @@ package com.mantenimiento.azul.model;
 public class ClassCounter {
     private int physicalLOC = 0;
     private String name;
+    private int methodCount = 0;
 
     public ClassCounter(String name) {
         this.name = name;
@@ -20,5 +21,11 @@ public class ClassCounter {
         return name;
     }
     
+    public void incrementMethodCount() {
+        this.methodCount++;
+    }
 
+    public int getMethodCount() {
+        return methodCount;
+    }
 }

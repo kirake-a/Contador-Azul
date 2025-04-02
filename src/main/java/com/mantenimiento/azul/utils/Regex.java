@@ -21,4 +21,9 @@ public class Regex {
     
     public static final Pattern CLASS_IDENTIFIER =  Pattern.compile(".*\\bclass\\b\\s\\w+.*");
 
+    public static final Pattern METHOD_IDENTIFIER = 
+    Pattern.compile("(@\\w+\\s*)?(public|private|protected)?\\s*(static\\s*)?(abstract\\s*)?\\w+\\s+\\w+\\s*\\([^)]*\\)\\s*(throws\\s+[\\w\\s,]+)?\\s*(\\{|;)");
+
+
+
 }
