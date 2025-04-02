@@ -98,35 +98,39 @@ public class Main {
 
     private static void printResults(List<FileStats> results, String projectPath) {
         int totalPhysicalLines = 0;
-        int totalLogicalLines = 0; //It was discontinued due to changing requirements
+        //int totalLogicalLines = 0; //It was discontinued due to changing requirements
+        int totalLines = 0;
 
         String[] projectP = projectPath.split("\\\\");
         String projectName = projectP[projectP.length - 1];
 
         System.out.println("");
         System.out.println("Programa: " + projectName);
-        System.out.printf("%-30s | %-10s | %-15s | %-26s |", "Clase", "Metodos","LOC f Clase", "LOC f totales del programa");
+        System.out.printf("%-30s | %-10s | %-15s | %-26s |", 
+            "Clase", "Metodos","LOC f Clase", "LOC f totales del programa");
         System.out.println("");
-        System.out.println("=".repeat(92));
+        System.out.println("=".repeat(139));
 
         for (FileStats stats : results) {
 
             totalPhysicalLines += stats.physicalLines();
-            totalLogicalLines += stats.logicalLines();
+            //totalLogicalLines += stats.logicalLines();
+            totalLines += stats.lines();
 
             for(int i = 0; i < stats.classes().size(); i++) {
-                System.out.printf("%-30s | %-10d | %-15d | %-26s |", 
-                stats.classes().get(i).getName(), 
-                stats.classes().get(i).getMethodCount(),  // Ahora imprime el número de métodos
-                stats.classes().get(i).getPhysicalLOC(), 
-    "");
-
+                System.out.printf("%-30s | %-10s | %-15s | %-26s | %-15s | %-26s |", 
+                    stats.classes().get(i).getName(), 
+                    stats.classes().get(i).getMethodCount(), 
+                    stats.classes().get(i).getPhysicalLOC(), 
+                    stats.classes().get(i).getLines(),
+                    "",
+                    "");
                 System.out.println("");
-            }          
+            }             
         }
 
-        System.out.println("");
-        System.out.println("=".repeat(92));
-        System.out.printf("%-30s | %-10s | %-15s | %-26d |","", "", "", totalPhysicalLines);
+        System.out.println("=".repeat(139));
+        System.out.printf("%-30s | %-10s | %-15s | %-26s | %-15s | %-26s |",
+            "", "", "", "", totalPhysicalLines, totalLines);
     }
 }

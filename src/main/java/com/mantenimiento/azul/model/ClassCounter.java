@@ -4,6 +4,7 @@ public class ClassCounter {
     private int physicalLOC = 0;
     private String name;
     private int methodCount = 0;
+    private int lines = 0;
 
     public ClassCounter(String name) {
         this.name = name;
@@ -27,5 +28,13 @@ public class ClassCounter {
 
     public int getMethodCount() {
         return methodCount;
+    }
+
+    public int getLines() {
+        return lines;
+    }
+
+    public void setLines(int lines) {
+        this.lines = lines;
     }
 }

@@ -24,6 +24,5 @@ public class Regex {
     public static final Pattern METHOD_IDENTIFIER = 
     Pattern.compile("(@\\w+\\s*)?(public|private|protected)?\\s*(static\\s*)?(abstract\\s*)?\\w+\\s+\\w+\\s*\\([^)]*\\)\\s*(throws\\s+[\\w\\s,]+)?\\s*(\\{|;)");
 
-
-
+    public static final Pattern RECORD_IDENTIFIER =  Pattern.compile(".*\\brecord\\b\\s\\w+.*");
 }
