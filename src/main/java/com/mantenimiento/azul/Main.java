@@ -106,10 +106,10 @@ public class Main {
 
         System.out.println("");
         System.out.println("Programa: " + projectName);
-        System.out.printf("%-30s | %-10s | %-15s | %-26s |", 
-            "Clase", "Metodos","LOC f Clase", "LOC f totales del programa");
+        System.out.printf("%-30s | %-10s | %-15s | %-15s | %-15s | %-15s |", 
+            "Clase", "Metodos", "LOC f Clase", "Lineas Clase", "LOC f Programa", "Lineas Programa");
         System.out.println("");
-        System.out.println("=".repeat(139));
+        System.out.println("=".repeat(117));
 
         for (FileStats stats : results) {
 
@@ -118,7 +118,7 @@ public class Main {
             totalLines += stats.lines();
 
             for(int i = 0; i < stats.classes().size(); i++) {
-                System.out.printf("%-30s | %-10s | %-15s | %-26s | %-15s | %-26s |", 
+                System.out.printf("%-30s | %-10s | %-15s | %-15s | %-15s | %-15s |", 
                     stats.classes().get(i).getName(), 
                     stats.classes().get(i).getMethodCount(), 
                     stats.classes().get(i).getPhysicalLOC(), 
@@ -129,8 +129,8 @@ public class Main {
             }             
         }
 
-        System.out.println("=".repeat(139));
-        System.out.printf("%-30s | %-10s | %-15s | %-26s | %-15s | %-26s |",
+        System.out.println("=".repeat(117));
+        System.out.printf("%-30s | %-10s | %-15s | %-15s | %-15s | %-15s |",
             "", "", "", "", totalPhysicalLines, totalLines);
     }
 }
