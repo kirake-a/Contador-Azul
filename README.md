@@ -1,12 +1,14 @@
 # 🔵 Contador Azul  
 
-**Versión 1.1**  
+**Versión 2.0**  
 
 Contador Azul es un software diseñado para analizar código fuente en Java y determinar el número de líneas físicas y lógicas presentes en un proyecto. Es una herramienta útil para desarrolladores y equipos de software que buscan obtener métricas de su código de manera eficiente.  
 
 ## 📌 Características  
 - Lectura de archivos de código fuente Java.  
-- Identificación y conteo de líneas físicas y lógicas.  
+- Identificación y conteo de clases y métodos.
+- Identificación de las líneas físicas totales del programa.
+- Identificación de líneas del programa.  
 - Generación de reportes con los resultados del análisis.  
 - Compatible con Windows, macOS y Linux.  
 
@@ -17,30 +19,8 @@ Para instalar **Contador Azul**, sigue estos pasos:
 1. Acceder al repositorio oficial en GitHub.  
 2. Descargar la última versión del software desde la sección **Releases**.  
 3. Abrir la carpeta **Ejecutables**.  
-4. Descargar el instalador según el sistema operativo:  
-   - **Windows**: `ContadorAzul.exe`  
-   - **MacOS**: `ContadorAzul.jar`  
-5. Ejecutar el archivo descargado y seguir las instrucciones.    
-
-## 🚀 Ejecución  
-
-Para iniciar el programa, sigue los pasos según tu sistema operativo:  
-
-### **Windows**  
-1. Abrir la carpeta **Ejecutables**.  
-2. Ingresar a la carpeta **Windows**.
-3. Localizar y ejecutar `ContadorAzul.exe`.  
-
-### **MacOS**  
-1. Abrir la carpeta **Ejecutables**.  
-2. Ingresar a la carpeta **MacOS**.  
-3. Abrir la **Terminal** en esta ubicación (clic derecho → "Abrir en Terminal").  
-4. Ejecutar el programa con el siguiente comando:  
-
-   ```bash
-   java -jar ContadorAzul.jar
-   ```
-> **Nota:** Es importante que la ruta que se le proporcione al programa no contenga espacios, por ejemplo: `C:\...\MiCarpeta\ContadorAzul` o `/Users/Nombre/MiCarpeta/ContadorAzul`.
+4. Entrar a la carpeta de la versión que has descargado, ```v2```.  
+5. Ejecutar el archivo .jar según el manual de usuario.   
 
 ## 🗑️ Desinstalación  
 
@@ -53,10 +33,12 @@ Para eliminar **Contador Azul** de tu computadora:
 ## 📊 Interpretación de Resultados  
 
 Después de ejecutar el análisis, se mostrará un reporte con:  
-- Listado de archivos examinados.  
-- Recuento de líneas físicas por archivo.  
-- Recuento de líneas lógicas por archivo.  
-- Recuento total de líneas físicas y lógicas en el proyecto.  
+- Listado de clases examinadas.  
+- Recuento de metodos por clase.  
+- Recuento de LOC físicas de clase. 
+- Recuento de líneas de clase. 
+- Recuento total de LOC físicas del programa.
+- Recuento de líneas totales del programa. 
 
 Para más detalles sobre los criterios utilizados, consulta los documentos **Estándar de Conteo** y **Estándar de Codificación**.  
 
@@ -64,36 +46,38 @@ Para más detalles sobre los criterios utilizados, consulta los documentos **Est
 
 A continuación, se presentan documentos de referencia para una mejor comprensión del software:   
 
-- 📘 [Manual de Usuario](https://docs.google.com/document/d/1oogZ-e2WY053GrU4JliW0DFGPPSPsZsBcy_5ffgM9qc/edit?usp=drive_link)
-- 📝 [Estándar de Documentación](https://docs.google.com/document/d/1su15Wlsb_VEBhRw2Iu9I7EtNqbBYPkfPqGkgGl9LvvE/edit?usp=drive_link)  
-- 💻 [Estándar de Codificación](https://docs.google.com/document/d/19uOpc1kjzP53rjO6apAeHAVlR4MmoQyKsyDTl_dHiSE/edit?usp=drive_link)  
-- 🔢 [Estándar de Conteo](https://docs.google.com/document/d/11PiwfwI5jAJ-mE7bw50hUrQQ6ZCvLvrPH3EOa5TMtkU/edit?usp=drive_link)  
-- 📜 [Requisitos de Software](https://docs.google.com/document/d/1bI06r7wwYfzkezmOEdO2JPwaAShDrfzbgfU4EOcBKac/edit?usp=drive_link)  
-- 📏 [Estimación de Tamaño](https://docs.google.com/document/d/1g4BUsrweWxv-6HuhO8cfAFGnIbE28OUy2KC8V0qG9xE/edit?usp=drive_link)  
-- 🧪 [Casos de Prueba](https://docs.google.com/document/d/1kSWAUzAkavfHFmvxus_ew1cxgmv9bXrP/edit?usp=drive_link&ouid=118319778907901421542&rtpof=true&sd=true)  
+- 📘 [Manual de Usuario]()
+- 📜 [Requisitos de Software](https://drive.google.com/file/d/1eIMf3hdCHbt4BXQVxGx-CsqDQyZz7xvM/view?usp=drive_link)
+- 🏠 [Documento de Arquitectura de Software](https://drive.google.com/file/d/1_kvMYwCmSU2Z70m1EtZPfFqqpiYJOeSq/view?usp=drive_link)
+- 📝 [Estándar de Documentación](https://drive.google.com/file/d/1V2y5LWP45odOF1HamzFdebbRStZGA93-/view?usp=drive_link)  
+- 💻 [Estándar de Codificación](https://drive.google.com/file/d/1hUwmHJ8XF8k7Ofmryo7lprffmXnHEigA/view?usp=drive_link)  
+- 🔢 [Estándar de Conteo](https://drive.google.com/file/d/1d9bXxVyL3kL6Z_CYPiJnu4cb4g7-bWrD/view?usp=drive_link)  
+- 🧪 [Casos de Prueba](https://drive.google.com/file/d/1ais2_V15Pt9vqwXlTHZ5J-XdTgktRlXI/view?usp=drive_link)  
 
 ### 📊 Diagramas
 
-- 📌 [Diagrama de Clases](https://drive.google.com/file/d/1iUIdOFh8PK0kPbRYfi-ifxI700BUx5YP/view?usp=drive_link)
-- 🔄 [Diagrama de Secuencia](https://drive.google.com/file/d/1Fyush5ETxeLQoOLyNVCIXy1n8w29exuD/view?usp=drive_link)
+- 📌 [Diagrama de Clases](https://drive.google.com/file/d/1o7NpaeqqzVxv5d256ol9xtsz-sfMf_es/view?usp=drive_link)
+- 🔄 [Diagrama de Secuencia](https://drive.google.com/file/d/1_SRl6mWluxzk7303p4ZAnzZ734dUw4Ux/view?usp=drive_link)
+- ⚙️ [Diagrama de Componentes](https://drive.google.com/file/d/1YHG8WesMgCoan03TQg5HESr586lVUSr4/view?usp=drive_link)
 
 ## 📖 Estándares Utilizados  
 
 El desarrollo de **Contador Azul** se basa en los siguientes estándares de calidad y documentación de software:  
 
-- 📑 [IEEE Std 1063-2001](https://drive.google.com/file/d/1ZIYISvjl5rOOlpSgvxCv_4gsB6wyQY3_/view?usp=drive_link)
-- 📜 [IEEE Std 830-1998](https://drive.google.com/file/d/1mxtL5cdzKf8cUiJZ-274TfEhTJASoA3u/view?usp=drive_link)
-- 🔍 [ISO/IEEE Std.1028 – 1997](https://drive.google.com/file/d/1g8dBzLd4nQz2ysXNanFmfyVzafO-DfMl/view?usp=drive_link)
-- 🛠️ [ISO/IEEE Std.1012 – 2016](https://drive.google.com/file/d/1E_ZUKkqkTrvzV2X0ua52uxz2ChDWqi28/view?usp=drive_link)
-- 🏗️ [ISO/IEEE Std.20246 – 2017](https://drive.google.com/file/d/1neQNQUSvc7EdePtgQ0ajXKw4sjQL-s2y/view?usp=drive_link)
-- 📊 [ISO/IEC 15939](https://drive.google.com/file/d/1oQ9x49OFU7PGYX5UYhwURqqbM2HkNceg/view?usp=drive_link)
+- 📑 [IEEE Std 1063-2001](https://drive.google.com/file/d/1riiiN2Dt3DseevnNYTmlmzi9xqp3PRgG/view?usp=drive_link)
+- 📜 [IEEE Std 830-1998](https://drive.google.com/file/d/1u8h6PWTpQumCm0n3xw3zJu_iEfevjhVY/view?usp=drive_link)
+- 🔍 [ISO/IEEE Std.1028 – 1997](https://drive.google.com/file/d/1PqCa7KXNvxFCAPtGzg5tavO2Gfr2tLf8/view?usp=drive_link)
+- 🛠️ [ISO/IEEE Std.1012 – 2016](https://drive.google.com/file/d/1Mv9Iv3Av4PdENfkhj-BTxvbXRRy3bzKD/view?usp=drive_link)
+- 🏗️ [ISO/IEEE Std.20246 – 2017](https://drive.google.com/file/d/1_78K_aP6grwmYm7AR268LeouO_56lape/view?usp=drive_link)
+- 📊 [ISO/IEC 15939](https://drive.google.com/file/d/1A2O3gWLOZERlTmIqBCFpYY98ub0uPJbz/view?usp=drive_link)
 
 ---  
 📌 **Desarrollado por:**  
-- **Canul Ordoñez, Josué Israel**  
-- **Garcilazo Cuevas, Mónica**  
-- **Leo Fernández, José Carlos**  
-- **Pool Flores, Endrick Alfredo**  
-- **Rodríguez Coral, Samuel David**  
+- **Aguilar Ramírez, Ian**  
+- **Alvarado Interián, Rubén Enrique**  
+- **Couoh Martín, Reynaldo**  
+- **Chan, Adrián**  
+- **Cruz Inzunza, Luis**  
+- **May Vivas, Carlos**  
 
 **Mantenimiento de Software - Universidad Autónoma de Yucatán**  
