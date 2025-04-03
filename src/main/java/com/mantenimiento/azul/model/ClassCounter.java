@@ -11,7 +11,7 @@ public class ClassCounter {
     }
 
     public int getPhysicalLOC() {
-        return physicalLOC - 2;
+        return physicalLOC - 2; // -2 for the class declarations
     }
 
     public void addPhysicalLOC() {
