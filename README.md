@@ -46,13 +46,13 @@ Para más detalles sobre los criterios utilizados, consulta los documentos **Est
 
 A continuación, se presentan documentos de referencia para una mejor comprensión del software:   
 
-- 📘 [Manual de Usuario]()
-- 📜 [Requisitos de Software](https://drive.google.com/file/d/1eIMf3hdCHbt4BXQVxGx-CsqDQyZz7xvM/view?usp=drive_link)
-- 🏠 [Documento de Arquitectura de Software](https://drive.google.com/file/d/1_kvMYwCmSU2Z70m1EtZPfFqqpiYJOeSq/view?usp=drive_link)
-- 📝 [Estándar de Documentación](https://drive.google.com/file/d/1V2y5LWP45odOF1HamzFdebbRStZGA93-/view?usp=drive_link)  
-- 💻 [Estándar de Codificación](https://drive.google.com/file/d/1hUwmHJ8XF8k7Ofmryo7lprffmXnHEigA/view?usp=drive_link)  
-- 🔢 [Estándar de Conteo](https://drive.google.com/file/d/1d9bXxVyL3kL6Z_CYPiJnu4cb4g7-bWrD/view?usp=drive_link)  
-- 🧪 [Casos de Prueba](https://drive.google.com/file/d/1ais2_V15Pt9vqwXlTHZ5J-XdTgktRlXI/view?usp=drive_link)  
+- 📘 [Manual de Usuario](https://drive.google.com/file/d/1br6zx81sG83BYaX_Q9SZmzl9YPKkAGqD/view?usp=drive_link)
+- 📜 [Requisitos de Software](https://drive.google.com/file/d/1xBERgfeFMwJWKQVatG3ily5SlYHipxTg/view?usp=drive_link)
+- 🏠 [Documento de Arquitectura de Software](https://drive.google.com/file/d/1iEKMQDM0DpH7zMa7qIwLDXuFSuacFPuT/view?usp=drive_link)
+- 📝 [Estándar de Documentación](https://drive.google.com/file/d/1HKzcOU0tkMD7oBFiuB13PRnPKphHyg3Z/view?usp=drive_link)  
+- 💻 [Estándar de Codificación](https://drive.google.com/file/d/1fD-OIqSp4Pedrz_3soULvuEEsMTXLWRD/view?usp=drive_link)  
+- 🔢 [Estándar de Conteo](https://drive.google.com/file/d/14EutMV4FyjWbAexTPFzlVVhJGc4wYJdQ/view?usp=drive_link)  
+- 🧪 [Casos de Prueba](https://drive.google.com/file/d/1LIKU4rAUBbNvvQXO-ouXJnIscFpc6Vzr/view?usp=drive_link)  
 
 ### 📊 Diagramas
 
