@@ -14,7 +14,7 @@
     </properties>
     
     <build>
-        <finalName>ContadorAzul-1.1</finalName>
+        <finalName>ContadorAzul-2.0</finalName>
         <plugins>
             <!-- Plugin para compilar el código Java -->
             <plugin>
@@ -33,7 +33,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                    <outputDirectory>${project.basedir}</outputDirectory>
+                    <outputDirectory>target</outputDirectory>
                     <archive>
                         <manifest>
                             <mainClass>com.mantenimiento.azul.Main</mainClass> <!-- Ajusta esto según tu paquete/clase principal -->

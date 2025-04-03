@@ -1,12 +1,14 @@
 # 🔵 Contador Azul  
 
-**Versión 1.1**  
+**Versión 2.0**  
 
 Contador Azul es un software diseñado para analizar código fuente en Java y determinar el número de líneas físicas y lógicas presentes en un proyecto. Es una herramienta útil para desarrolladores y equipos de software que buscan obtener métricas de su código de manera eficiente.  
 
 ## 📌 Características  
 - Lectura de archivos de código fuente Java.  
-- Identificación y conteo de líneas físicas y lógicas.  
+- Identificación y conteo de clases y métodos.
+- Identificación de las líneas físicas totales del programa.
+- Identificación de líneas del programa.  
 - Generación de reportes con los resultados del análisis.  
 - Compatible con Windows, macOS y Linux.  
 
@@ -17,30 +19,8 @@ Para instalar **Contador Azul**, sigue estos pasos:
 1. Acceder al repositorio oficial en GitHub.  
 2. Descargar la última versión del software desde la sección **Releases**.  
 3. Abrir la carpeta **Ejecutables**.  
-4. Descargar el instalador según el sistema operativo:  
-   - **Windows**: `ContadorAzul.exe`  
-   - **MacOS**: `ContadorAzul.jar`  
-5. Ejecutar el archivo descargado y seguir las instrucciones.    
-
-## 🚀 Ejecución  
-
-Para iniciar el programa, sigue los pasos según tu sistema operativo:  
-
-### **Windows**  
-1. Abrir la carpeta **Ejecutables**.  
-2. Ingresar a la carpeta **Windows**.
-3. Localizar y ejecutar `ContadorAzul.exe`.  
-
-### **MacOS**  
-1. Abrir la carpeta **Ejecutables**.  
-2. Ingresar a la carpeta **MacOS**.  
-3. Abrir la **Terminal** en esta ubicación (clic derecho → "Abrir en Terminal").  
-4. Ejecutar el programa con el siguiente comando:  
-
-   ```bash
-   java -jar ContadorAzul.jar
-   ```
-> **Nota:** Es importante que la ruta que se le proporcione al programa no contenga espacios, por ejemplo: `C:\...\MiCarpeta\ContadorAzul` o `/Users/Nombre/MiCarpeta/ContadorAzul`.
+4. Entrar a la carpeta de la versión que has descargado, ```v2```.  
+5. Ejecutar el archivo .jar según el manual de usuario.   
 
 ## 🗑️ Desinstalación  
 
@@ -53,10 +33,12 @@ Para eliminar **Contador Azul** de tu computadora:
 ## 📊 Interpretación de Resultados  
 
 Después de ejecutar el análisis, se mostrará un reporte con:  
-- Listado de archivos examinados.  
-- Recuento de líneas físicas por archivo.  
-- Recuento de líneas lógicas por archivo.  
-- Recuento total de líneas físicas y lógicas en el proyecto.  
+- Listado de clases examinadas.  
+- Recuento de metodos por clase.  
+- Recuento de LOC físicas de clase. 
+- Recuento de líneas de clase. 
+- Recuento total de LOC físicas del programa.
+- Recuento de líneas totales del programa. 
 
 Para más detalles sobre los criterios utilizados, consulta los documentos **Estándar de Conteo** y **Estándar de Codificación**.  
 
@@ -64,37 +46,38 @@ Para más detalles sobre los criterios utilizados, consulta los documentos **Est
 
 A continuación, se presentan documentos de referencia para una mejor comprensión del software:   
 
-- 📘 [Manual de Usuario](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Manual%20de%20Usuario%20(V1.1).pdf)
-- 📝 [Estándar de Documentación](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Est%C3%A1ndar%20de%20Documentaci%C3%B3n%20(V1.0).pdf)  
-- 💻 [Estándar de Codificación](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Est%C3%A1ndar%20de%20Codificaci%C3%B3n%20(V1.0).pdf)  
-- 🔢 [Estándar de Conteo](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Est%C3%A1ndar%20de%20Conteo%20(V1.1).pdf)  
-- 📜 [Requisitos de Software](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Requisitos%20de%20Software%20(V1.0).pdf)  
-- 📏 [Estimación de Tamaño](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Estimaci%C3%B3n%20de%20Tama%C3%B1o%20(V1.1).pdf)  
-- 🧪 [Casos de Prueba](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/Casos%20de%20Prueba%20(V1.2).pdf)  
+- 📘 [Manual de Usuario](https://drive.google.com/file/d/1br6zx81sG83BYaX_Q9SZmzl9YPKkAGqD/view?usp=drive_link)
+- 📜 [Requisitos de Software](https://drive.google.com/file/d/1xBERgfeFMwJWKQVatG3ily5SlYHipxTg/view?usp=drive_link)
+- 🏠 [Documento de Arquitectura de Software](https://drive.google.com/file/d/1iEKMQDM0DpH7zMa7qIwLDXuFSuacFPuT/view?usp=drive_link)
+- 📝 [Estándar de Documentación](https://drive.google.com/file/d/1HKzcOU0tkMD7oBFiuB13PRnPKphHyg3Z/view?usp=drive_link)  
+- 💻 [Estándar de Codificación](https://drive.google.com/file/d/1fD-OIqSp4Pedrz_3soULvuEEsMTXLWRD/view?usp=drive_link)  
+- 🔢 [Estándar de Conteo](https://drive.google.com/file/d/14EutMV4FyjWbAexTPFzlVVhJGc4wYJdQ/view?usp=drive_link)  
+- 🧪 [Casos de Prueba](https://drive.google.com/file/d/1LIKU4rAUBbNvvQXO-ouXJnIscFpc6Vzr/view?usp=drive_link)  
 
 ### 📊 Diagramas
 
-- 📌 [Diagrama de Clases](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/diagramas/Diagrama%20de%20Clases.pdf)
-- 🔄 [Diagrama de Secuencia](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/diagramas/Diagrama%20de%20Secuencia.pdf)
+- 📌 [Diagrama de Clases](https://drive.google.com/file/d/1o7NpaeqqzVxv5d256ol9xtsz-sfMf_es/view?usp=drive_link)
+- 🔄 [Diagrama de Secuencia](https://drive.google.com/file/d/1_SRl6mWluxzk7303p4ZAnzZ734dUw4Ux/view?usp=drive_link)
+- ⚙️ [Diagrama de Componentes](https://drive.google.com/file/d/1YHG8WesMgCoan03TQg5HESr586lVUSr4/view?usp=drive_link)
 
 ## 📖 Estándares Utilizados  
 
 El desarrollo de **Contador Azul** se basa en los siguientes estándares de calidad y documentación de software:  
 
-- 📑 [IEEE Std 1063-2001](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/ieee-standard-for-software-user-documentation.pdf)
-- 📜 [IEEE Std 830-1998](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/IEEE830.pdf)
-- 📃 [IEEE Std 828-2012](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/IEEE%20828-2012.pdf)
-- 🔍 [ISO/IEEE Std.1028 – 1997](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/IEEE%20Std%201028-1997.pdf)
-- 🛠️ [ISO/IEEE Std.1012 – 2016](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/Standart%20IEEE%201012-2016.pdf)
-- 🏗️ [ISO/IEEE Std.20246 – 2017](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/ISO-IEC-20246-2017.pdf)
-- 📊 [ISO/IEC 15939](https://github.com/MoniGarcilazo/Contador-Azul/blob/main/documentos/estandares/isoiecieee-international-standard--systems-and-software-engineer.pdf)
+- 📑 [IEEE Std 1063-2001](https://drive.google.com/file/d/1riiiN2Dt3DseevnNYTmlmzi9xqp3PRgG/view?usp=drive_link)
+- 📜 [IEEE Std 830-1998](https://drive.google.com/file/d/1u8h6PWTpQumCm0n3xw3zJu_iEfevjhVY/view?usp=drive_link)
+- 🔍 [ISO/IEEE Std.1028 – 1997](https://drive.google.com/file/d/1PqCa7KXNvxFCAPtGzg5tavO2Gfr2tLf8/view?usp=drive_link)
+- 🛠️ [ISO/IEEE Std.1012 – 2016](https://drive.google.com/file/d/1Mv9Iv3Av4PdENfkhj-BTxvbXRRy3bzKD/view?usp=drive_link)
+- 🏗️ [ISO/IEEE Std.20246 – 2017](https://drive.google.com/file/d/1_78K_aP6grwmYm7AR268LeouO_56lape/view?usp=drive_link)
+- 📊 [ISO/IEC 15939](https://drive.google.com/file/d/1A2O3gWLOZERlTmIqBCFpYY98ub0uPJbz/view?usp=drive_link)
 
 ---  
 📌 **Desarrollado por:**  
-- **Canul Ordoñez, Josué Israel**  
-- **Garcilazo Cuevas, Mónica**  
-- **Leo Fernández, José Carlos**  
-- **Pool Flores, Endrick Alfredo**  
-- **Rodríguez Coral, Samuel David**  
+- **Aguilar Ramírez, Ian**  
+- **Alvarado Interián, Rubén Enrique**  
+- **Couoh Martín, Reynaldo**  
+- **Chan, Adrián**  
+- **Cruz Inzunza, Luis**  
+- **May Vivas, Carlos**  
 
 **Mantenimiento de Software - Universidad Autónoma de Yucatán**  
