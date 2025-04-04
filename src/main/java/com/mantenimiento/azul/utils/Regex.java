@@ -12,7 +12,7 @@ public class Regex {
     public static final Pattern SINGLE_LINE_COMMENT = Pattern.compile("//.*");
 
     public static final Pattern BLOCK_COMMENT_START = Pattern.compile("/\\*.*");
-    public static final Pattern BLOCK_COMMENT_CONTINUE = Pattern.compile("^\\s*\\*.*$"); // It still doesn't work well
+    public static final Pattern BLOCK_COMMENT_CONTINUE = Pattern.compile("^\\s*\\*.*$");
     public static final Pattern BLOCK_COMMENT_END = Pattern.compile(".*\\*/");
 
     public static final Pattern ENDS_WITH_BREAK =  Pattern.compile(".*;\\s*\\}.*");
