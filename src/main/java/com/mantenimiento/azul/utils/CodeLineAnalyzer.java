@@ -77,12 +77,6 @@ public class CodeLineAnalyzer {
                     continue;
                 }
 
-                // ---------------- Logical lines counter ---------------- //
-                /*
-                if (Regex.LOGICAL_LINE.matcher(line).matches()) {
-                    logicalLines++;
-                }
-                */
                 // ---------------- Physical line counter ---------------- //
                 physicalLines++; 
             }
